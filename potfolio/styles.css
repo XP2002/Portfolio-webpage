@@ -1,0 +1,212 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #55b3ff;
+    margin: 0;
+    padding: 0;
+    color: #000;
+}
+
+/* This is a wrapper to center the page layout */
+#wrapper {
+    width: 80%; /* makes the width 80 percent of the screen*/
+    background-color: #95a1aa;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px; /* rounds the corners */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /*adds a shadow for a lifting effect*/
+}
+
+header {
+    display: flex; /* uses flexbox for its layout*/
+    flex-direction: column; /* puts elements in a vertical alignment */
+    align-items: center;
+    background-color: #555eff;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    position: sticky; /* Makes header sticky for permanant use of the nav bar*/
+    top: 0;
+    z-index: 1; /* to make sure the header doesnt fall behind things when scrolling*/
+}
+
+/* takes out bullet points from the nav bar */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; 
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px; /* puts space between nav links */
+}
+
+/* styling for the nav links */
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* used for when hovered the text color and background color change */
+nav ul li a:hover {
+    background-color: #ffdd57;
+    color: #000;
+}
+
+/* styling for the about container */
+#about {
+    background-color: #55fff6;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section Layout */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: center;
+}
+
+/* creates a container for the hover to work */
+.image-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+/* styling for the image itself */
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+/* makes image bigger on hover */
+.image-container:hover img {
+    transform: scale(1.1);
+}
+/* styling for the project section */
+#projects {
+    background-color: #55fff6;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* arranges using flexbox*/
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* styling for the project card */
+.project-card {
+    background: #95a1aa;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+/* contact section styling */
+#contact {
+    background-color: #55fff6;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* contact form styling */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+/* styling for the labels used */
+#contact label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* styling for inputs */
+#contact input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* styling for inputs */
+#contact textarea{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* styling for button */
+#contact button {
+    margin-top: 15px;
+    background-color: #555eff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* changes the buttons color on hover */
+#contact button:hover {
+    background-color: #3333cc;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+/* makes the webpage look good for mobile devices */
+@media (max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .about-container img {
+        margin: auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .project-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
